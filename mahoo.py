@@ -75,16 +75,16 @@ def gif_card(gifpath, num, kw):
     bg = Image.open(bgPath)
     draw = ImageDraw.Draw(bg)
     font1 = ImageFont.truetype(os.path.join(os.path.dirname(__file__),'华康隶书体W3.TTC'), 20)
-    font2 = ImageFont.truetype(os.path.join(os.path.dirname(__file__),'华康隶书体W3.TTC'), 15)
+    font2 = ImageFont.truetype(os.path.join(os.path.dirname(__file__),'华康隶书体W3.TTC'), 14)
     draw.text((27, 24), word1, fill=(0, 0, 0), font=font1)    
     #draw.text((27, 319), word2, fill=(0 , 0, 0), font=font2)
     if num == 1: #'怪兽':
-        font3 = ImageFont.truetype(os.path.join(os.path.dirname(__file__),'华康隶书体W3.TTC'), 15)
+        font3 = ImageFont.truetype(os.path.join(os.path.dirname(__file__),'华康隶书体W3.TTC'), 14)
         mom_atk = f'{int(random.uniform(1,100))*100}'
         mom_def = f'{int(random.uniform(1,100))*100}'
-        draw.text((181, 380), mom_atk, fill=(0, 0, 0), font=font3)
-        draw.text((240, 380), mom_def, fill=(0, 0, 0), font=font3)
-    para = textwrap.wrap(word2, width=23)
+        draw.text((179, 380), mom_atk, fill=(0, 0, 0), font=font3)
+        draw.text((238, 380), mom_def, fill=(0, 0, 0), font=font3)
+    para = textwrap.wrap(word2, width=16)
     current_h, pad = 319, 0
     for line in para:
         w, h = draw.textsize(line, font=font2)
