@@ -7,6 +7,7 @@ from io import BytesIO
 from hoshino import Service, aiorequests
 import random
 import textwrap
+import opencc
 
 sv = Service('mahoo')
 
@@ -49,8 +50,9 @@ async def text_add(bot, ev):
 
 def gif_card(gifpath, num, kw):
     arr = kw.split(' ')
-    word1 = f'{arr[0]}'
-    word2 = f'{arr[1]}' 
+    cc = opencc.OpenCC('s2t')
+    word1 = cc.convert(f'{arr[0]}')
+    word2 = cc.convert(f'{arr[1]}') 
     GIF_PATH = path.join(path.dirname(__file__),'out')
     if num == 1: #'怪兽':
         type_name = "怪兽卡"
