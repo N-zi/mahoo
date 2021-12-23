@@ -20,4 +20,5 @@ HoshinoBot娱乐插件，在群内生成游戏王卡图
 
 生成的图片会存在`/hoshino/modules/mahoo/out` 目录下 
 
-<del>文字部分使用繁体，简体部分不显示</del>
+<del>文字部分使用繁体，简体部分不显示</del>现已支持简体
+
