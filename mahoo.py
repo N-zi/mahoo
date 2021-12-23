@@ -82,8 +82,8 @@ def gif_card(gifpath, num, kw):
         font3 = ImageFont.truetype(os.path.join(os.path.dirname(__file__),'华康隶书体W3.TTC'), 15)
         mom_atk = f'{int(random.uniform(1,100))*100}'
         mom_def = f'{int(random.uniform(1,100))*100}'
-        draw.text((181, 384), mom_atk, fill=(0, 0, 0), font=font3)
-        draw.text((240, 384), mom_def, fill=(0, 0, 0), font=font3)
+        draw.text((181, 380), mom_atk, fill=(0, 0, 0), font=font3)
+        draw.text((240, 380), mom_def, fill=(0, 0, 0), font=font3)
     para = textwrap.wrap(word2, width=23)
     current_h, pad = 319, 0
     for line in para:
