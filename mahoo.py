@@ -73,11 +73,11 @@ def gif_card(gifpath, num, kw):
     bg = Image.open(bgPath)
     draw = ImageDraw.Draw(bg)
     font1 = ImageFont.truetype(os.path.join(os.path.dirname(__file__),'华康隶书体W3.TTC'), 20)
-    font2 = ImageFont.truetype(os.path.join(os.path.dirname(__file__),'华康隶书体W3.TTC'), 10)
+    font2 = ImageFont.truetype(os.path.join(os.path.dirname(__file__),'华康隶书体W3.TTC'), 15)
     draw.text((27, 24), word1, fill=(0, 0, 0), font=font1)    
     #draw.text((27, 319), word2, fill=(0 , 0, 0), font=font2)
     if num == 1: #'怪兽':
-        font3 = ImageFont.truetype(os.path.join(os.path.dirname(__file__),'华康隶书体W3.TTC'), 10)
+        font3 = ImageFont.truetype(os.path.join(os.path.dirname(__file__),'华康隶书体W3.TTC'), 15)
         mom_atk = f'{int(random.uniform(1,100))*100}'
         mom_def = f'{int(random.uniform(1,100))*100}'
         draw.text((181, 384), mom_atk, fill=(0, 0, 0), font=font3)
