@@ -2,7 +2,7 @@
 HoshinoBot娱乐插件，在群内生成游戏王卡图
 
 #安装
-到`/hoshino/modules`目录下`git clone`   
+到`/hoshino/modules`目录下`git clone https://github.com/N-zi/mahoo`   
 并在 `/hoshino/config/__bot__.py`的`MODULES_ON`处添加`mahoo`开启模块
 
 #指令
