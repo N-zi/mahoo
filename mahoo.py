@@ -131,7 +131,10 @@ async def summon_monster(session: CommandSession):
     if len(img[uid]) == 0:
         session.pause('请发送需要的卡片图片')
     elif len(img[uid]) == 1:
-        session.pause('发送怪兽卡名字及信息')
+        if qq_name is None:
+            session.pause('发送怪兽卡名字及信息')
+        else:
+            session.pause('发送怪兽卡信息')
     elif len(img[uid]) >= 2:
         bg = img[uid][0]
         kw = img[uid][1].data["text"]
@@ -186,11 +189,14 @@ async def summon_magic(session: CommandSession):
     if len(img[uid]) == 0:
         session.pause('请发送需要的卡片图片')
     elif len(img[uid]) == 1:
-        session.pause('发送魔法卡名字及信息')
+        if qq_name is None:
+            session.pause('发送魔法卡名字及信息')
+        else:
+            session.pause('发送魔法卡信息')
     elif len(img[uid]) >= 2:
         bg = img[uid][0]
         kw = img[uid][1].data["text"]
-        pic = gif_card(bg, 1, kw)
+        pic = gif_card(bg, 2, kw)
         msg = f'[CQ:image,file=file:///{pic}]'
         img[uid] = []
         send_times[uid] = 0
@@ -241,11 +247,14 @@ async def summon_trap(session: CommandSession):
     if len(img[uid]) == 0:
         session.pause('请发送需要的卡片图片')
     elif len(img[uid]) == 1:
-        session.pause('发送陷阱卡名字及信息')
+        if qq_name is None:
+            session.pause('发送陷阱卡名字及信息')
+        else:
+            session.pause('发送陷阱卡信息')
     elif len(img[uid]) >= 2:
         bg = img[uid][0]
         kw = img[uid][1].data["text"]
-        pic = gif_card(bg, 1, kw)
+        pic = gif_card(bg, 3, kw)
         msg = f'[CQ:image,file=file:///{pic}]'
         img[uid] = []
         send_times[uid] = 0
