@@ -144,7 +144,7 @@ async def summon_monster(session: CommandSession):
         await session.finish(msg)
 
 
-@sv.on_prefix('发动魔法卡', only_to_me=False)
+@sv.on_command('发动魔法卡', only_to_me=False)
 async def summon_magic(session: CommandSession):
     global qq_name, is_get_msg
     event = session.ctx
@@ -199,7 +199,7 @@ async def summon_magic(session: CommandSession):
         await session.finish(msg)
 
 
-@sv.on_prefix('发动陷阱卡', only_to_me=False)
+@sv.on_command('发动陷阱卡', only_to_me=False)
 async def summon_trap(session: CommandSession):
     global qq_name, is_get_msg
     event = session.ctx
